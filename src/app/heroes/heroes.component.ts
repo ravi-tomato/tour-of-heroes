@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Hero } from '../schemas/hero';
 import { heroes } from './heroes';
 
@@ -11,4 +11,5 @@ import { heroes } from './heroes';
 export class HeroesComponent {
   title = 'Top Heroes';
   hero: Hero = heroes[0];
+  @Input() heroName: string = this.hero.name;
 }
