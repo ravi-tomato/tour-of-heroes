@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Hero } from '../schemas/hero';
-import { heroes } from './heroes';
+import { heroes } from '../heroes';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-heroes',
@@ -10,6 +12,13 @@ import { heroes } from './heroes';
 
 export class HeroesComponent {
   title = 'Top Heroes';
-  hero: Hero = heroes[0];
-  @Input() heroName: string = this.hero.name;
+  heroes: Hero[] = heroes;
+
+  // constructor(private location: Location) {}
+  constructor(private router: Router) {}
+
+  onBack(): void {
+    // this.location.back();
+    this.router.navigateByUrl('/');
+  }
 }
