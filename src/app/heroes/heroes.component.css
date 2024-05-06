@@ -1,0 +1,39 @@
+.heroes {
+    @apply mt-0 mb-[2em] mx-0 list-none p-0 w-[15em]
+}
+
+.heroes li {
+    @apply flex
+}
+
+.heroes button {
+    @apply flex flex-1 items-stretch h-7 cursor-pointer relative left-0 bg-[#EEE] m-2 p-0 rounded
+}
+
+.heroes button:hover {
+    @apply bg-[#525252] 
+}
+
+.heroes button:active {
+    @apply bg-[#525252] text-white;
+}
+
+.heroes button.selected {
+    @apply bg-black text-white;
+}
+
+.heroes button.selected:hover {
+    @apply bg-[#505050];
+}
+
+.heroes button.selected:active {
+    @apply bg-black text-white;
+}
+
+.heroes .badge {
+    @apply inline-block text-white text-sm py-3 px-3 pb-1 bg-[#405061] leading-[1em] mr-[0.8em] rounded;
+}
+
+.heroes .name {
+    @apply self-center;
+}

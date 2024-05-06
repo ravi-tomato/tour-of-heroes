@@ -1,11 +1,13 @@
 <h2>My Heroes</h2>
 
-<ul *ngFor="let hero of heroes; index as i">
-    <li>
-        <a routerLink="/hero-details">
-            <span>{{ hero.id }}</span>
-            <span>{{ hero.name }}</span>
-        </a>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <button>
+            <a routerLink="/hero-details">
+                <span class="badge">{{ hero.id }}</span>
+                <span class="name">{{ hero.name }}</span>
+            </a>
+        </button>
     </li>
 </ul>
 
